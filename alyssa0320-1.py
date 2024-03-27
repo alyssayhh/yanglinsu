@@ -1,12 +1,26 @@
-def extract_subjects(sentences):
-    subjects = []
-    for sentence in sentences:
-        ga_index = sentence.find("が")
-        subject = sentence[:ga_index].strip()
-        subjects.append(subject)
-    return subjects
+def extract_subject(sentence):
+    'wo_index' = sentence.find("を")
 
-sentences = ["私（わたし）がリンゴを食べます","彼（かれ）が本を読みます", "あなたが手紙を書きます"]
-subjects = extract_subjects(sentences)
-print("Subjects:", subjects)
+if wo_index != -1:
+    subject = sentence[:wo_index].strip()
+else:
+    subject = "No subject found"
+    
+return subject
+
+# test case
+
+sentence = [
+    "猫が魚を食べる",
+    "彼女が花を買う",
+    "子供たちが公園で遊ぶ",
+    "本を読む",
+    "泳ぐ",
+    "日本語を勉強する" 
+]
+for sentence in sentences:
+    subject = extract_subject(sentence)
+    print("Sentence:", sentence)
+    print("Subject:", subject)
+    print()  # Print an empty line for better readability
 
