@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+def extract_subject(sentence):
+    'wo_index' = sentence.find("を")
+
+if wo_index != -1:
+    subject = sentence[:wo_index].strip()
+else:
+    subject = "No subject found"
+    
+return subject
+
+# test case
+
+sentence = [
+    "猫が魚を食べる",
+    "彼女が花を買う",
+    "子供たちが公園で遊ぶ",
+    "本を読む",
+    "泳ぐ",
+    "日本語を勉強する" 
+]
+for sentence in sentences:
+    subject = extract_subject(sentence)
+    print("Sentence:", sentence)
+    print("Subject:", subject)
+    print()  # Print an empty line for better readability
+
+=======
 def extract_subjects(sentences):
     subjects = []
     for sentence in sentences:
@@ -10,3 +38,4 @@ sentences = ["私（わたし）がリンゴを食べます","彼（かれ）が
 subjects = extract_subjects(sentences)
 print("Subjects:", subjects)
 
+>>>>>>> f6c95beaee51917c91979b8df98bdf6da37acc83
