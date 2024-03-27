@@ -1,11 +1,10 @@
 def extract_subject(sentence):
-    'wo_index' = sentence.find("を")
+    ga_index = sentence.find("が")
 
-if wo_index != -1:
-    subject = sentence[:wo_index].strip()
+if ga_index != -1:
+    subject = sentence[:ga_index].strip()
 else:
     subject = "No subject found"
-    
 return subject
 
 # test case
@@ -18,9 +17,9 @@ sentence = [
     "泳ぐ",
     "日本語を勉強する" 
 ]
-for sentence in sentences:
-    subject = extract_subject(sentence)
-    print("Sentence:", sentence)
-    print("Subject:", subject)
+for sentence in i:
+    subject = extract_subject(i)
+    print("Sentence:", i)
+    print("Subject:", i)
     print()  # Print an empty line for better readability
 
